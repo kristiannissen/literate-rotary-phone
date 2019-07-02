@@ -2,7 +2,12 @@
    <h1>Hello from the AppComponent</h1>
 </template>
 <script>
-   export default {
-
-   }
+export default {
+  mounted() {
+    console.log("Hello Kitty");
+  },
+  created() {
+    console.log("Hello Kitty");
+  }
+};
 </script>
