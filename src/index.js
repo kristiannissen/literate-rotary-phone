@@ -1,11 +1,6 @@
-/**
- * @file index.js
- */
 import Vue from 'vue'
-import App from './App.vue'
+import AppComponent from './AppComponent.vue'
 
-Vue.component("app", App)
-
-const app = new Vue({
-    el: '#app'
-})
+new Vue({
+   render: h => h(AppComponent)
+ }).$mount('#app')
