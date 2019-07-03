@@ -1,37 +1,45 @@
 <template>
   <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-      <h4>
-        Yeasts
-        <button class="mdl-button mdl-js-button mdl-button--icon">
-          <i class="material-icons">keyboard_arrow_down</i>
-        </button>
-      </h4>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <h3>{{ name }}</h3>
+      </div>
     </div>
-    <ul class="mdl-list">
-      <li
-        class="mdl-list__item mdl-list__item--three-line"
-        v-for="item in yeastList"
-      >
-        <span class="mdl-list__item-primary-content">
-          <span>{{ item.name }}</span>
-          <span class="mdl-list__item-text-body"> </span>
-        </span>
-        <span class="mdl-list__item-secondary-content">
-          <label
-            class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
-            v-bind:for="item.id"
-          >
-            <input
-              type="checkbox"
-              v-bind:id="item.id"
-              v-bind:value="item.name"
-              class="mdl-checkbox__input"
-            />
-          </label>
-        </span>
-      </li>
-    </ul>
+    <div class="mdl-grid">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col"><h4>Yeasts</h4></div>
+      </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <ul class="mdl-list">
+            <li
+              class="mdl-list__item mdl-list__item--three-line"
+              v-for="item in yeastList"
+            >
+              <span class="mdl-list__item-primary-content">
+                <span>{{ item.name }}</span>
+                <span class="mdl-list__item-text-body">{{
+                  item.substitutes
+                }}</span>
+              </span>
+              <span class="mdl-list__item-secondary-content">
+                <label
+                  class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+                  v-bind:for="item.id"
+                >
+                  <input
+                    type="checkbox"
+                    v-bind:id="item.id"
+                    v-bind:value="item.name"
+                    class="mdl-checkbox__input"
+                  />
+                </label>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -97,7 +105,11 @@ export default {
       return this.yeasts.map(function(item) {
         return {
           name: item.name,
-          id: item.name.toLowerCase().replace(/\W/g, "_")
+          id: item.name.toLowerCase().replace(/\W/g, "_"),
+          substitutes: [
+            "Wyeast 1214 Belgian Ale",
+            "White Labs 500 Monastery Ale"
+          ].join(", ")
         };
       });
     }
