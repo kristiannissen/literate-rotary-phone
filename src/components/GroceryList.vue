@@ -1,15 +1,15 @@
 <template>
-  <div class="mdl-grid">
-    <div class="mdl-grid">
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-grid mdl-grid--no-spacing">
       <div class="mdl-cell mdl-cell--12-col">
         <h3>{{ name }}</h3>
       </div>
     </div>
     <div class="mdl-grid">
-      <div class="mdl-grid">
+      <div class="mdl-grid mdl-grid--no-spacing">
         <div class="mdl-cell mdl-cell--12-col"><h4>Yeasts</h4></div>
       </div>
-      <div class="mdl-grid">
+      <div class="mdl-grid mdl-grid--no-spacing">
         <div class="mdl-cell mdl-cell--12-col">
           <ul class="mdl-list">
             <li
