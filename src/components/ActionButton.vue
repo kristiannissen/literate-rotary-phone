@@ -1,7 +1,7 @@
 <template>
-   <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
     <i class="material-icons">add</i>
-   </button>
+  </button>
 </template>
 <script>
 export default {
