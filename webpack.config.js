@@ -34,7 +34,7 @@ module.exports = {
       hash: true,
       inject: true,
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: false
       }
     })

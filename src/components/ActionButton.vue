@@ -12,7 +12,7 @@
             </button>
         </li>
         <li>
-            <button class="mdl-button mdl-js-button">
+            <button class="mdl-button mdl-js-button" v-on:click="saveAction">
                 <i class="material-icons">save</i>
             </button>
         </li>
@@ -26,16 +26,15 @@ export default {
       active: false
     };
   },
-  mounted() {
-    console.log("Hello Kitty");
-  },
-  created() {
-    console.log("Hello Kitty");
-  },
+  mounted() {},
+  created() {},
   methods: {
     toggleActions() {
       if (this.active === false) this.active = true;
       else this.active = false;
+    },
+    saveAction() {
+      this.$root.$emit("HelloKitty", { payload: "Fisse" });
     }
   }
 };

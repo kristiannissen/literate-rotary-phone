@@ -9,6 +9,10 @@ export default {
       title: "Brew Title"
     };
   },
-  created() {}
+  created() {
+    this.$root.$on("HelloKitty", function() {
+      console.log("hello doush");
+    });
+  }
 };
 </script>
