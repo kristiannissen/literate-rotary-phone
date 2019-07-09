@@ -1,5 +1,5 @@
 <template>
-   <h1>Hello Kitty</h1>
+  <h1>Hello Kitty</h1>
 </template>
 <script>
 export default {
