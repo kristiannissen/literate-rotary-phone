@@ -1,5 +1,5 @@
 <template>
-  <div>Hello Kitty</div>
+  <dialog>Hello Kitty</dialog>
 </template>
 <script>
 export default {
@@ -9,10 +9,8 @@ export default {
     };
   },
   created() {
-    console.log("created");
   },
   mounted() {
-    console.log("mounted");
   }
 };
 </script>

@@ -11,7 +11,7 @@
         <span class="mdl-list__item-primary-content">
           <span>{{ item.name }}</span>
           <span class="mdl-list__item-text-body">
-            <a href="" v-for="sub in item.substitutes">{{ sub }}</a>
+            {{ item.substitutes }}
           </span>
         </span>
         <span class="mdl-list__item-secondary-action">
@@ -102,7 +102,7 @@ export default {
         return {
           name: item.name,
           id: item.name.toLowerCase().replace(/\W/g, "_"),
-          substitutes: item.substitutes
+          substitutes: item.substitutes.join(", ")
         };
       });
     }
